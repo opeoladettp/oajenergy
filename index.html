@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="OAJ Energy — Nigeria's trusted solar engineering brand. Expert solar PV installation, hybrid inverter commissioning, and electrical maintenance across Lagos and beyond." />
+  <meta name="keywords" content="OAJ Energy, solar engineer Nigeria, renewable energy Lagos, solar PV installation, hybrid inverter, oajenergy.com" />
+  <meta name="author" content="OAJ Energy — Ogundele Anuoluwapo Joseph" />
+  <meta property="og:title"       content="OAJ Energy | Solar Engineering That Works" />
+  <meta property="og:description" content="We bring clean, reliable solar power to Nigerian homes and businesses. Expert field engineering from site to system — built to last." />
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://oajenergy.com" />
+  <meta name="robots"        content="index, follow" />
+  <meta name="theme-color"   content="#f5a623" />
+  <link rel="canonical" href="https://oajenergy.com" />
+  <title>OAJ Energy | Solar Engineering That Works</title>
+
+  <!-- Favicon -->
+  <link rel="icon"             type="image/png" href="assets/images/favicon.png" />
+  <link rel="apple-touch-icon"                  href="assets/images/favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+  <!-- Ambient background -->
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+  <div id="progress-bar"   aria-hidden="true"></div>
+  <div class="orb orb-1"   aria-hidden="true"></div>
+  <div class="orb orb-2"   aria-hidden="true"></div>
+  <div class="orb orb-3"   aria-hidden="true"></div>
+
+  <!-- ============================================================
+       NAVBAR
+  ============================================================ -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav-inner">
+
+        <a href="#hero" class="nav-logo" aria-label="OAJ Energy — home">
+          <div class="nav-logo-icon" aria-hidden="true">
+            <span class="material-icons-round">bolt</span>
+          </div>
+          <span class="nav-logo-text">OAJ <span>Energy</span></span>
+        </a>
+
+        <ul class="nav-links" role="menubar">
+          <li role="none"><a href="#about"        role="menuitem">About</a></li>
+          <li role="none"><a href="#skills"       role="menuitem">Expertise</a></li>
+          <li role="none"><a href="#experience"   role="menuitem">Track Record</a></li>
+          <li role="none"><a href="#competencies" role="menuitem">Services</a></li>
+          <li role="none"><a href="#education"    role="menuitem">Training</a></li>
+          <li role="none"><a href="#contact"      role="menuitem">Contact</a></li>
+        </ul>
+
+        <a href="mailto:hello@oajenergy.com" class="btn btn-primary nav-cta" id="nav-cta-btn">
+          <span class="material-icons-round" aria-hidden="true">mail</span>
+          Work With Us
+        </a>
+
+        <button class="nav-hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+          <span class="material-icons-round">menu</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile nav -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <button class="mobile-close" id="mobileClose" aria-label="Close menu">
+      <span class="material-icons-round">close</span>
+    </button>
+    <a href="#about"        id="mob-about">About</a>
+    <a href="#skills"       id="mob-skills">Expertise</a>
+    <a href="#experience"   id="mob-exp">Track Record</a>
+    <a href="#competencies" id="mob-comp">Services</a>
+    <a href="#education"    id="mob-edu">Training</a>
+    <a href="#contact"      id="mob-contact">Contact</a>
+  </div>
+
+  <!-- ============================================================
+       HERO — exactly 100vh
+  ============================================================ -->
+  <section id="hero" aria-labelledby="hero-heading">
+    <div class="hero-bg" id="heroBg" aria-hidden="true"></div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+
+    <div class="container hero-content">
+
+      <div class="hero-badge" aria-label="Open to projects and partnerships">
+        <span class="material-icons-round" aria-hidden="true">verified</span>
+        Open to Projects &amp; Partnerships
+      </div>
+
+      <p class="hero-eyebrow">OAJ Energy &nbsp;·&nbsp; Lagos, Nigeria</p>
+
+      <h1 class="hero-name" id="hero-heading">
+        Solar Power,<br/>
+        <span class="highlight">Done Right.</span>
+      </h1>
+
+      <p class="hero-desc">
+        We design, install, and maintain solar systems that genuinely perform — from site survey to years of reliable output. Field expertise. Real accountability. Clean energy for every Nigerian home and business.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#competencies" class="btn btn-primary" id="hero-services-btn">
+          <span class="material-icons-round" aria-hidden="true">solar_power</span>
+          Explore Our Services
+        </a>
+        <a href="#contact" class="btn btn-outline" id="hero-quote-btn">
+          <span class="material-icons-round" aria-hidden="true">request_quote</span>
+          Get a Free Quote
+        </a>
+      </div>
+
+      <div class="hero-stats" role="list" aria-label="OAJ Energy key figures">
+        <div class="hero-stat" role="listitem">
+          <span class="hero-stat-num" id="stat-years">5+</span>
+          <span class="hero-stat-label">Years in the Field</span>
+        </div>
+        <div class="hero-divider" aria-hidden="true"></div>
+        <div class="hero-stat" role="listitem">
+          <span class="hero-stat-num" id="stat-systems">50+</span>
+          <span class="hero-stat-label">Systems Installed</span>
+        </div>
+        <div class="hero-divider" aria-hidden="true"></div>
+        <div class="hero-stat" role="listitem">
+          <span class="hero-stat-num" id="stat-partners">4</span>
+          <span class="hero-stat-label">Industry Partners</span>
+        </div>
+        <div class="hero-divider" aria-hidden="true"></div>
+        <div class="hero-stat" role="listitem">
+          <span class="hero-stat-num" id="stat-safety">100%</span>
+          <span class="hero-stat-label">Safety Compliance</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ABOUT
+  ============================================================ -->
+  <section id="about" aria-labelledby="about-heading">
+    <div class="container">
+      <div class="about-grid">
+
+        <!-- Image -->
+        <div class="about-image-wrap fade-up">
+          <div class="about-img-frame">
+            <img src="assets/images/profile.png"
+                 alt="Ogundele Anuoluwapo Joseph — Founder of OAJ Energy, Solar Field Engineer"
+                 loading="lazy" />
+            <div class="about-img-overlay" aria-hidden="true"></div>
+            <div class="about-img-badge" aria-label="Currently leading Wyre Energy field operations">
+              <div class="about-img-badge-icon" aria-hidden="true">
+                <span class="material-icons-round">solar_power</span>
+              </div>
+              <div class="about-img-badge-text">
+                <p>Wyre Energy</p>
+                <p>Field Engineer · 2025 – Present</p>
+              </div>
+            </div>
+          </div>
+          <div class="about-float-card" aria-label="Lagos, Nigeria — serving nationwide">
+            <span class="material-icons-round" aria-hidden="true">location_on</span>
+            <div class="about-float-card-text">
+              <p>Lagos, NG</p>
+              <p>Serving Nationwide</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Text -->
+        <div class="about-text fade-up">
+          <div class="section-label" aria-hidden="true">
+            <span class="material-icons-round">person</span>
+            The Brand Behind the Work
+          </div>
+          <h2 class="section-title" id="about-heading">
+            Engineering Nigeria's<br/><span>Clean Energy</span> Future
+          </h2>
+          <p style="margin-top:12px;">
+            <strong>OAJ Energy</strong> was founded on a simple conviction: Nigerians deserve solar systems that actually work — not ones that underperform, fail early, or arrive without expert support.
+          </p>
+          <p>
+            Led by <strong>Ogundele Anuoluwapo Joseph</strong>, a hands-on field engineer with over five years of active deployment experience, we bring technical rigour, safety discipline, and genuine passion to every engagement — residential, commercial, or industrial.
+          </p>
+          <p>
+            From initial site survey through to commissioning and long-term maintenance, we own the full process. Fewer surprises, faster turnarounds, systems built to last years — not just months.
+          </p>
+
+          <div class="about-contact-list" aria-label="OAJ Energy contact information">
+            <div class="about-contact-item">
+              <span class="material-icons-round" aria-hidden="true">language</span>
+              <a href="https://oajenergy.com">oajenergy.com</a>
+            </div>
+            <div class="about-contact-item">
+              <span class="material-icons-round" aria-hidden="true">mail</span>
+              <a href="mailto:hello@oajenergy.com">hello@oajenergy.com</a>
+            </div>
+            <div class="about-contact-item">
+              <span class="material-icons-round" aria-hidden="true">phone</span>
+              <a href="tel:+2347033072469">+234 703 307 2469</a>
+            </div>
+            <div class="about-contact-item">
+              <span class="material-icons-round" aria-hidden="true">location_on</span>
+              <span>Lagos, Nigeria — Available Nationwide</span>
+            </div>
+          </div>
+
+          <div class="about-actions">
+            <a href="#contact" class="btn btn-primary" id="about-start-btn">
+              <span class="material-icons-round" aria-hidden="true">request_quote</span>
+              Start a Project
+            </a>
+            <a href="#experience" class="btn btn-outline" id="about-track-btn">
+              <span class="material-icons-round" aria-hidden="true">history_edu</span>
+              Our Track Record
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SKILLS / EXPERTISE
+  ============================================================ -->
+  <section id="skills" aria-labelledby="skills-heading">
+    <div class="container skills-inner">
+
+      <div class="skills-header fade-up">
+        <div class="section-label" aria-hidden="true">
+          <span class="material-icons-round">build</span>
+          Expertise
+        </div>
+        <h2 class="section-title" id="skills-heading">What We <span>Know Cold</span></h2>
+        <p class="section-sub">Years of field work across Lagos have sharpened a toolkit that covers every layer of a solar project — from cable to kilowatt.</p>
+      </div>
+
+      <div class="skills-grid">
+
+        <article class="skill-card fade-up" aria-label="Solar and PV systems expertise">
+          <div class="skill-card-icon" aria-hidden="true">
+            <span class="material-icons-round">solar_power</span>
+          </div>
+          <h3>Solar &amp; PV Systems</h3>
+          <div class="skill-tag-list" role="list">
+            <span class="skill-tag" role="listitem">PV System Installation</span>
+            <span class="skill-tag" role="listitem">Hybrid Inverter Config</span>
+            <span class="skill-tag" role="listitem">Battery Storage</span>
+            <span class="skill-tag" role="listitem">Off-Grid Systems</span>
+            <span class="skill-tag" role="listitem">MPPT Charge Controllers</span>
+            <span class="skill-tag" role="listitem">Panel Mounting</span>
+          </div>
+        </article>
+
+        <article class="skill-card fade-up" aria-label="Electrical engineering expertise">
+          <div class="skill-card-icon" aria-hidden="true">
+            <span class="material-icons-round">electric_bolt</span>
+          </div>
+          <h3>Electrical Engineering</h3>
+          <div class="skill-tag-list" role="list">
+            <span class="skill-tag" role="listitem">Wiring &amp; Distribution</span>
+            <span class="skill-tag" role="listitem">Energy Metering</span>
+            <span class="skill-tag" role="listitem">Circuit Configuration</span>
+            <span class="skill-tag" role="listitem">Safety Compliance</span>
+            <span class="skill-tag" role="listitem">Industrial Electrical</span>
+            <span class="skill-tag" role="listitem">Load Analysis</span>
+          </div>
+        </article>
+
+        <article class="skill-card fade-up" aria-label="Field engineering operations">
+          <div class="skill-card-icon" aria-hidden="true">
+            <span class="material-icons-round">engineering</span>
+          </div>
+          <h3>Field Engineering Ops</h3>
+          <div class="skill-tag-list" role="list">
+            <span class="skill-tag" role="listitem">Fault Diagnosis</span>
+            <span class="skill-tag" role="listitem">System Commissioning</span>
+            <span class="skill-tag" role="listitem">Preventive Maintenance</span>
+            <span class="skill-tag" role="listitem">Site Assessment</span>
+            <span class="skill-tag" role="listitem">Technical Reporting</span>
+            <span class="skill-tag" role="listitem">Performance Monitoring</span>
+          </div>
+        </article>
+
+        <article class="skill-card fade-up" aria-label="How OAJ Energy operates">
+          <div class="skill-card-icon" aria-hidden="true">
+            <span class="material-icons-round">psychology</span>
+          </div>
+          <h3>How We Operate</h3>
+          <div class="skill-tag-list" role="list">
+            <span class="skill-tag" role="listitem">Safety First, Always</span>
+            <span class="skill-tag" role="listitem">On-Site Problem Solving</span>
+            <span class="skill-tag" role="listitem">Pressure-Tested</span>
+            <span class="skill-tag" role="listitem">Fast Turnarounds</span>
+            <span class="skill-tag" role="listitem">Clear Communication</span>
+            <span class="skill-tag" role="listitem">Client-Focused</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       EXPERIENCE / TRACK RECORD
+  ============================================================ -->
+  <section id="experience" aria-labelledby="experience-heading">
+    <div class="container experience-inner">
+
+      <div class="exp-header fade-up">
+        <div class="section-label" aria-hidden="true">
+          <span class="material-icons-round">work_history</span>
+          Track Record
+        </div>
+        <h2 class="section-title" id="experience-heading">Where We've <span>Worked</span></h2>
+        <p class="section-sub">Every role on this list sharpened our field craft. From apprentice to founder — this is what real solar experience looks like.</p>
+      </div>
+
+      <div class="timeline timeline-scroll">
+        <div class="timeline-grid" role="list" aria-label="Professional timeline">
+
+          <!-- Item 1 -->
+          <article class="timeline-item fade-up" role="listitem">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <h3 class="timeline-role">Field Engineer — Solar PV Systems</h3>
+                <span class="timeline-period">
+                  <span class="material-icons-round" aria-hidden="true">calendar_today</span>
+                  2025 – Present
+                </span>
+              </div>
+              <div class="timeline-company">
+                <span class="material-icons-round" aria-hidden="true">business</span>
+                Wyre Energy &nbsp;·&nbsp; Lagos, Nigeria
+              </div>
+              <ul class="timeline-bullets" aria-label="Responsibilities at Wyre Energy">
+                <li><span class="material-icons-round" aria-hidden="true">chevron_right</span>Lead end-to-end installation and commissioning of residential and commercial solar PV and hybrid inverter systems</li>
+                <li><span class="material-icons-round" aria-hidden="true">chevron_right</span>Conduct site surveys and load assessments to right-size every system — no guesswork, just data</li>
+                <li><span class="material-icons-round" aria-hidden="true">chevron_right</span>Diagnose inverter errors, wiring faults, and array underperformance fast and accurately</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Item 2 -->
+          <article class="timeline-item fade-up" role="listitem">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <h3 class="timeline-role">Founder &amp; Lead Engineer</h3>
+                <span class="timeline-period">
+                  <span class="material-icons-round" aria-hidden="true">calendar_today</span>
+                  2023 – Present
+                </span>
+              </div>
+              <div class="timeline-company">
+                <span class="material-icons-round" aria-hidden="true">business</span>
+                HelioGrid Energy Solutions &nbsp;·&nbsp; Lagos, Nigeria
+              </div>
+              <ul class="timeline-bullets" aria-label="Responsibilities at HelioGrid Energy Solutions">
+                <li><span class="material-icons-round" aria-hidden="true">chevron_right</span>Built a solar installation and maintenance practice serving residential clients across Lagos</li>
+                <li><span class="material-icons-round" aria-hidden="true">chevron_right</span>Handle system design, load estimation, and equipment selection for off-grid and hybrid configurations</li>
+                <li><span class="material-icons-round" aria-hidden="true">chevron_right</span>Guide clients on energy optimisation — helping them get more from every kilowatt</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Item 3 -->
+          <article class="timeline-item fade-up" role="listitem">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <h3 class="timeline-role">Mechanical / Electrical Technical Support</h3>
+                <span class="timeline-period">
+                  <span class="material-icons-round" aria-hidden="true">calendar_today</span>
+                  2024
+                </span>
+              </div>
+              <div class="timeline-company">
+                <span class="material-icons-round" aria-hidden="true">business</span>
+                Dufil Prima Foods Nigeria Ltd &nbsp;·&nbsp; Lagos
+              </div>
+              <ul class="timeline-bullets" aria-label="Responsibilities at Dufil Prima Foods">
+                <li><span class="material-icons-round" aria-hidden="true">chevron_right</span>Maintained industrial electrical systems and production machinery in a high-volume manufacturing environment</li>
+                <li><span class="material-icons-round" aria-hidden="true">chevron_right</span>Rapid fault detection and component troubleshooting to minimise costly production downtime</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Item 4 -->
+          <article class="timeline-item fade-up" role="listitem">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <h3 class="timeline-role">Solar Technician Apprentice</h3>
+                <span class="timeline-period">
+                  <span class="material-icons-round" aria-hidden="true">calendar_today</span>
+                  2020 – 2024
+                </span>
+              </div>
+              <div class="timeline-company">
+                <span class="material-icons-round" aria-hidden="true">business</span>
+                Sun Power Solar Company &nbsp;·&nbsp; Lagos, Nigeria
+              </div>
+              <ul class="timeline-bullets" aria-label="Responsibilities at Sun Power Solar Company">
+                <li><span class="material-icons-round" aria-hidden="true">chevron_right</span>Trained hands-on in solar PV installation — panel mounting, wiring, inverter and battery configuration</li>
+                <li><span class="material-icons-round" aria-hidden="true">chevron_right</span>Supported engineers across site inspections, commissioning, and system testing activities</li>
+                <li><span class="material-icons-round" aria-hidden="true">chevron_right</span>Built the field instincts that define how OAJ Energy operates today</li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SERVICES
+  ============================================================ -->
+  <section id="competencies" aria-labelledby="comp-heading">
+    <div class="container services-inner">
+
+      <div class="comp-header fade-up">
+        <div class="section-label" aria-hidden="true">
+          <span class="material-icons-round">handyman</span>
+          Our Services
+        </div>
+        <h2 class="section-title" id="comp-heading">Everything Your <span>Solar Project</span> Needs</h2>
+        <p class="section-sub">Every service is delivered directly by our field team — with precision, accountability, and no shortcuts.</p>
+      </div>
+
+      <div class="comp-grid">
+
+        <article class="comp-card fade-up" aria-label="Solar PV installation and commissioning">
+          <div class="comp-icon" aria-hidden="true"><span class="material-icons-round">solar_power</span></div>
+          <h3>Solar PV Installation &amp; Commissioning</h3>
+          <p>From panel to plug — full deployment of residential or commercial solar systems, wired clean and validated for long-term performance before we leave site.</p>
+        </article>
+
+        <article class="comp-card fade-up" aria-label="Hybrid inverter and battery integration">
+          <div class="comp-icon" aria-hidden="true"><span class="material-icons-round">battery_charging_full</span></div>
+          <h3>Hybrid Inverter &amp; Battery Integration</h3>
+          <p>Reliable power when the grid goes dark. We configure hybrid inverter and battery systems so your home or business keeps running — seamlessly and efficiently.</p>
+        </article>
+
+        <article class="comp-card fade-up" aria-label="Electrical wiring and distribution">
+          <div class="comp-icon" aria-hidden="true"><span class="material-icons-round">cable</span></div>
+          <h3>Electrical Wiring &amp; Distribution</h3>
+          <p>Safe, compliant electrical infrastructure is the backbone of every great solar system. We wire it right the first time — no rework, no risk.</p>
+        </article>
+
+        <article class="comp-card fade-up" aria-label="Site assessment and load analysis">
+          <div class="comp-icon" aria-hidden="true"><span class="material-icons-round">analytics</span></div>
+          <h3>Site Assessment &amp; Load Analysis</h3>
+          <p>Before anything gets installed, we assess your site thoroughly. The right system size, the right equipment — matched precisely to your actual energy needs.</p>
+        </article>
+
+        <article class="comp-card fade-up" aria-label="Fault diagnosis and rapid troubleshooting">
+          <div class="comp-icon" aria-hidden="true"><span class="material-icons-round">search</span></div>
+          <h3>Fault Diagnosis &amp; Troubleshooting</h3>
+          <p>System not performing? We find the fault fast — inverter errors, wiring issues, underperforming arrays — and restore full output with minimal downtime.</p>
+        </article>
+
+        <article class="comp-card fade-up" aria-label="Maintenance and system optimisation">
+          <div class="comp-icon" aria-hidden="true"><span class="material-icons-round">build_circle</span></div>
+          <h3>Maintenance &amp; System Optimisation</h3>
+          <p>With the right maintenance plan, systems don't have to degrade. We keep your installation at peak output, extending lifespan and protecting your investment.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       EDUCATION / TRAINING
+  ============================================================ -->
+  <section id="education" aria-labelledby="education-heading">
+    <div class="container edu-inner">
+
+      <div class="edu-header fade-up">
+        <div class="section-label" aria-hidden="true">
+          <span class="material-icons-round">school</span>
+          Training &amp; Credentials
+        </div>
+        <h2 class="section-title" id="education-heading">The Foundation <span>Behind the Field Work</span></h2>
+        <p class="section-sub">Formal training, industry certification, and non-stop hands-on learning — that's how OAJ Energy's expertise was built.</p>
+      </div>
+
+      <div class="edu-grid">
+
+        <article class="edu-card fade-up" aria-label="ITF-NECA Technical Skills Development Project">
+          <div class="edu-card-icon" aria-hidden="true">
+            <span class="material-icons-round">workspace_premium</span>
+          </div>
+          <h3>ITF-NECA Technical Skills Development Project (TSDP)</h3>
+          <p class="edu-degree">Electrical / Electronic Maintenance</p>
+          <p class="edu-meta">
+            <span class="material-icons-round" aria-hidden="true">location_on</span>Ikeja, Lagos
+            &nbsp;·&nbsp;
+            <span class="material-icons-round" aria-hidden="true">calendar_today</span>2024
+          </p>
+        </article>
+
+        <article class="edu-card fade-up" aria-label="Federal Polytechnic Ilaro National Diploma">
+          <div class="edu-card-icon" aria-hidden="true">
+            <span class="material-icons-round">school</span>
+          </div>
+          <h3>Federal Polytechnic, Ilaro</h3>
+          <p class="edu-degree">National Diploma — Management Science (Marketing)</p>
+          <p class="edu-meta">
+            <span class="material-icons-round" aria-hidden="true">location_on</span>Ogun State, Nigeria
+            &nbsp;·&nbsp;
+            <span class="material-icons-round" aria-hidden="true">calendar_today</span>2019 – 2021
+          </p>
+        </article>
+
+        <article class="edu-card fade-up" aria-label="Electrical Installation and Maintenance ITF-NECA">
+          <div class="edu-card-icon" aria-hidden="true">
+            <span class="material-icons-round">electric_bolt</span>
+          </div>
+          <h3>Electrical Installation &amp; Maintenance Training</h3>
+          <p class="edu-degree">ITF-NECA Certified Programme</p>
+          <p class="edu-meta">
+            <span class="material-icons-round" aria-hidden="true">location_on</span>Lagos, Nigeria
+            &nbsp;·&nbsp;
+            <span class="material-icons-round" aria-hidden="true">task_alt</span>Certified
+          </p>
+        </article>
+
+        <article class="edu-card fade-up" aria-label="Solar PV Installation and Maintenance hands-on training">
+          <div class="edu-card-icon" aria-hidden="true">
+            <span class="material-icons-round">solar_power</span>
+          </div>
+          <h3>Solar PV Installation &amp; Maintenance</h3>
+          <p class="edu-degree">Hands-on Field Training Programme</p>
+          <p class="edu-meta">
+            <span class="material-icons-round" aria-hidden="true">location_on</span>Lagos, Nigeria
+            &nbsp;·&nbsp;
+            <span class="material-icons-round" aria-hidden="true">task_alt</span>Completed
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ACTIVITIES
+  ============================================================ -->
+  <section id="activities" aria-labelledby="activities-heading">
+    <div class="container activities-inner">
+
+      <div class="act-header fade-up">
+        <div class="section-label" aria-hidden="true">
+          <span class="material-icons-round">star</span>
+          Project Highlights
+        </div>
+        <h2 class="section-title" id="activities-heading">Work We're <span>Proud Of</span></h2>
+        <p class="section-sub">A snapshot of real-world solar and electrical projects that have shaped the OAJ Energy brand.</p>
+      </div>
+
+      <div class="act-list">
+        <div class="act-item fade-up">
+          <div class="act-item-icon" aria-hidden="true"><span class="material-icons-round">home</span></div>
+          <p>Residential solar PV deployments — off-grid and hybrid — delivering consistent power to Nigerian homes</p>
+        </div>
+        <div class="act-item fade-up">
+          <div class="act-item-icon" aria-hidden="true"><span class="material-icons-round">battery_charging_full</span></div>
+          <p>Inverter and battery integration projects keeping critical loads running through every power outage</p>
+        </div>
+        <div class="act-item fade-up">
+          <div class="act-item-icon" aria-hidden="true"><span class="material-icons-round">cable</span></div>
+          <p>Full electrical rewiring and system upgrades that improved both safety and efficiency for clients</p>
+        </div>
+        <div class="act-item fade-up">
+          <div class="act-item-icon" aria-hidden="true"><span class="material-icons-round">speed</span></div>
+          <p>Energy meter installation and calibration giving clients clear, real-time visibility of solar output</p>
+        </div>
+        <div class="act-item fade-up">
+          <div class="act-item-icon" aria-hidden="true"><span class="material-icons-round">build</span></div>
+          <p>Emergency field troubleshooting and full system recovery — restoring power fast when it matters most</p>
+        </div>
+        <div class="act-item fade-up">
+          <div class="act-item-icon" aria-hidden="true"><span class="material-icons-round">fact_check</span></div>
+          <p>End-to-end site inspections and commissioning — ensuring every system meets spec before sign-off</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT
+  ============================================================ -->
+  <section id="contact" aria-labelledby="contact-heading">
+    <div class="container contact-inner">
+
+      <div class="contact-grid">
+
+        <!-- Left: info -->
+        <div class="contact-left fade-up">
+          <div class="section-label" aria-hidden="true">
+            <span class="material-icons-round">contact_mail</span>
+            Let's Talk
+          </div>
+          <h2 class="section-title" id="contact-heading">Ready to <span>Go Solar?</span></h2>
+          <p>Planning a new installation, troubleshooting an existing system, or exploring what clean energy can do for you? Reach out — no sales pressure, just straight engineering advice.</p>
+
+          <div class="contact-info-list" aria-label="OAJ Energy contact details">
+            <div class="contact-info-item">
+              <div class="contact-info-icon" aria-hidden="true"><span class="material-icons-round">language</span></div>
+              <div class="contact-info-text">
+                <p>Website</p>
+                <p><a href="https://oajenergy.com">oajenergy.com</a></p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-icon" aria-hidden="true"><span class="material-icons-round">mail</span></div>
+              <div class="contact-info-text">
+                <p>Email</p>
+                <p><a href="mailto:hello@oajenergy.com">hello@oajenergy.com</a></p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-icon" aria-hidden="true"><span class="material-icons-round">phone</span></div>
+              <div class="contact-info-text">
+                <p>Phone</p>
+                <p><a href="tel:+2347033072469">+234 703 307 2469</a></p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-icon" aria-hidden="true"><span class="material-icons-round">location_on</span></div>
+              <div class="contact-info-text">
+                <p>Base</p>
+                <p>Lagos, Nigeria — Available Nationwide</p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-icon" aria-hidden="true"><span class="material-icons-round">schedule</span></div>
+              <div class="contact-info-text">
+                <p>Response Time</p>
+                <p>Usually within 24 hours</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: form -->
+        <div class="contact-right fade-up">
+          <form class="contact-form" id="contactForm" novalidate aria-label="Project enquiry form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contact-name">Your Name</label>
+                <input type="text" id="contact-name" name="name" placeholder="John Doe" autocomplete="name" required />
+              </div>
+              <div class="form-group">
+                <label for="contact-email">Email Address</label>
+                <input type="email" id="contact-email" name="email" placeholder="john@example.com" autocomplete="email" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contact-subject">What do you need?</label>
+              <input type="text" id="contact-subject" name="subject" placeholder="e.g. New Solar Installation, System Fault, Maintenance" required />
+            </div>
+            <div class="form-group">
+              <label for="contact-message">Tell Us More</label>
+              <textarea id="contact-message" name="message" placeholder="Describe your project, location, rough system size, or any questions you have…" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary form-submit" id="contact-submit-btn">
+              <span class="material-icons-round" aria-hidden="true">send</span>
+              Send Enquiry
+            </button>
+            <div class="form-error" id="formError" role="alert" aria-live="polite"></div>
+            <div class="form-success" id="formSuccess" role="status" aria-live="polite">
+              <span class="material-icons-round" style="font-size:30px;display:block;margin-bottom:8px;" aria-hidden="true">check_circle</span>
+              Message received — we'll be in touch within 24 hours.<br/>Thanks for choosing OAJ Energy.
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <div class="nav-logo-icon" aria-hidden="true" style="width:30px;height:30px;border-radius:8px;">
+            <span class="material-icons-round" style="font-size:15px;">bolt</span>
+          </div>
+          OAJ <span>Energy</span>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="#about">About</a>
+          <a href="#skills">Expertise</a>
+          <a href="#experience">Track Record</a>
+          <a href="#competencies">Services</a>
+          <a href="#education">Training</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; <span id="year"></span> OAJ Energy &nbsp;·&nbsp; Solar Engineering That Works &nbsp;·&nbsp;
+          <a href="mailto:hello@oajenergy.com">hello@oajenergy.com</a>
+          <br/>
+          <small style="opacity:0.55;">Powering Nigeria's clean energy transition — one system at a time. &nbsp;|&nbsp; oajenergy.com</small>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button id="back-to-top" aria-label="Back to top">
+    <span class="material-icons-round">keyboard_arrow_up</span>
+  </button>
+
+  <!-- JS -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
