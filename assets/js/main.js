@@ -193,11 +193,11 @@
   });
 
   /* --------------------------------------------------
-     CONTACT FORM — Formspree submission
-     Sign up at https://formspree.io, create a form,
-     then replace YOUR_FORM_ID with your actual form ID.
+     CONTACT FORM — FormSend submission
+     Docs: https://formsend.ezeroandone.io/docs
+     API key is stored in the hidden input inside the form.
   -------------------------------------------------- */
-  const FORMSPREE_URL = 'https://formspree.io/f/xdkozpyz'; // ← replace with your form ID
+  const FORMSEND_URL = 'https://api.formsend.ezeroandone.io/submit';
 
   const contactForm = document.getElementById('contactForm');
   const formSuccess = document.getElementById('formSuccess');
@@ -249,15 +249,16 @@
       const email   = document.getElementById('contact-email')?.value.trim();
       const subject = document.getElementById('contact-subject')?.value.trim();
       const message = document.getElementById('contact-message')?.value.trim();
+      const apiKey  = contactForm.querySelector('input[name="api_key"]')?.value;
 
-      // Validate
+      // Client-side validation
       let valid = true;
-      if (!name)    { setFieldError('contact-name',    'Name is required.');          valid = false; }
-      if (!email)   { setFieldError('contact-email',   'Email is required.');         valid = false; }
+      if (!name)    { setFieldError('contact-name',    'Name is required.');             valid = false; }
+      if (!email)   { setFieldError('contact-email',   'Email is required.');            valid = false; }
       else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-                      setFieldError('contact-email',   'Enter a valid email address.'); valid = false; }
+                      setFieldError('contact-email',   'Enter a valid email address.');  valid = false; }
       if (!subject) { setFieldError('contact-subject', 'Please tell us what you need.'); valid = false; }
-      if (!message) { setFieldError('contact-message', 'Message cannot be empty.');   valid = false; }
+      if (!message) { setFieldError('contact-message', 'Message cannot be empty.');      valid = false; }
       if (!valid) return;
 
       // Loading state
@@ -266,21 +267,29 @@
       submitBtn.disabled = true;
 
       try {
-        const res = await fetch(FORMSPREE_URL, {
-          method: 'POST',
-          headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
-          body: JSON.stringify({ name, email, subject, message, _replyto: email })
+        const res  = await fetch(FORMSEND_URL, {
+          method:  'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body:    JSON.stringify({ api_key: apiKey, name, email, subject, message })
         });
 
-        if (res.ok) {
-          // Success
+        const data = await res.json().catch(() => ({}));
+
+        if (res.ok && data.success) {
+          // Success — hide form, show confirmation
           contactForm.style.display = 'none';
           if (formSuccess) formSuccess.style.display = 'block';
         } else {
-          const data = await res.json().catch(() => ({}));
-          const msg  = data?.errors?.map(err => err.message).join(', ')
-                       || 'Submission failed. Please try again or email us directly.';
-          showFormError(msg);
+          // Map common FormSend error codes to friendly messages
+          let errMsg = data.message || 'Submission failed. Please try again or email us directly.';
+          if (res.status === 429) {
+            errMsg = 'Too many requests — please wait a few minutes before trying again.';
+          } else if (res.status === 403) {
+            errMsg = 'Submission blocked. Please email us directly at hello@oajenergy.com.ng.';
+          } else if (res.status === 401) {
+            errMsg = 'Configuration error. Please email us directly at hello@oajenergy.com.ng.';
+          }
+          showFormError(errMsg);
           submitBtn.innerHTML = originalHTML;
           submitBtn.disabled  = false;
         }
@@ -291,7 +300,7 @@
       }
     });
 
-    // Clear field error on input
+    // Clear individual field error on input
     ['contact-name','contact-email','contact-subject','contact-message'].forEach(id => {
       document.getElementById(id)?.addEventListener('input', () => {
         const el = document.getElementById(id);
