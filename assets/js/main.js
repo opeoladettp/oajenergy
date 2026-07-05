@@ -1,6 +1,6 @@
 /* ================================================
    OAJ ENERGY — JAVASCRIPT
-   oajenergy.com | hello@oajenergy.com.ng
+   hello@oajenergy.com.ng
 ================================================ */
 
 (function () {
